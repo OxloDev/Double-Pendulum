@@ -3,7 +3,7 @@ import os
 import math
 import random
 from points import *
-import formular
+import formula
 from pygame import font
 
 os.environ['SDL_VIDEO_CENTERED']='1'
@@ -52,8 +52,8 @@ while run:
             run = False
 
     # acceleration formula
-    angle_acceleration1 = formular.FirstAcceleration(angle1, angle2, mass1, mass2, length1, length2, Gravity, angle_velocity1, angle_velocity2)
-    angle_acceleration2 = formular.SecondAcceleration(angle1, angle2, mass1, mass2, length1, length2, Gravity, angle_velocity1, angle_velocity2)
+    angle_acceleration1 = formula.FirstAcceleration(angle1, angle2, mass1, mass2, length1, length2, Gravity, angle_velocity1, angle_velocity2)
+    angle_acceleration2 = formula.SecondAcceleration(angle1, angle2, mass1, mass2, length1, length2, Gravity, angle_velocity1, angle_velocity2)
 
     x1 = float(length1 * math.sin(angle1)+x_offset)
     y1 = float(length1 * math.cos(angle1)+y_offset)
